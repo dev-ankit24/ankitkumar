@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  /* Slate 950 - Very deep dark */
+  --foreground: #f8fafc;
+  /* Slate 50 - Off-white text */
+  --primary: #df6531;
+  /* User requested Burnt Orange */
+  --secondary: #a855f7;
+  /* Purple 500 */
+  --accent: #10b981;
+  /* Emerald 500 */
+  --muted: #94a3b8;
+  /* Slate 400 */
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  @apply antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Glassmorphism Utility */
